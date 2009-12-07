@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  make: MyString
+  model: MyString
+  model_year: 1
+  manufacture_year: 1
+  board: MyString
+  color: MyString
+
+two:
+  make: MyString
+  model: MyString
+  model_year: 1
+  manufacture_year: 1
+  board: MyString
+  color: MyString

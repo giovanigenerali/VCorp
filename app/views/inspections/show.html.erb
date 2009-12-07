@@ -1,0 +1,20 @@
+<% title "Inspection" %>
+
+<p>
+  <strong>Car:</strong>
+  <%=h @inspection.car.model_board %>
+</p>
+<p>
+  <strong>Date:</strong>
+  <%=h @inspection.date %>
+</p>
+<p>
+  <strong>Description:</strong>
+  <%=h @inspection.description %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_inspection_path(@inspection) %> |
+  <%= link_to "Destroy", @inspection, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", inspections_path %>
+</p>

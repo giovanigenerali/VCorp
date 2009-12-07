@@ -1,0 +1,13 @@
+one:
+  department: 
+  name: MyString
+  email: MyString
+  position: MyString
+  telephone: MyString
+
+two:
+  department: 
+  name: MyString
+  email: MyString
+  position: MyString
+  telephone: MyString

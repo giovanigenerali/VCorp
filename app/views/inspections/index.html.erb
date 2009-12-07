@@ -1,0 +1,21 @@
+<% title "Inspections" %>
+
+<table>
+  <tr>
+    <th>Car/Board</th>
+    <th>Date</th>
+    <th>Description</th>
+  </tr>
+  <% for inspection in @inspections %>
+    <tr>
+      <td><%=h inspection.car.model_board %></td>
+      <td><%=h inspection.date %></td>
+      <td><%=h inspection.description %></td>
+      <td><%= link_to "Show", inspection %></td>
+      <td><%= link_to "Edit", edit_inspection_path(inspection) %></td>
+      <td><%= link_to "Destroy", inspection, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Inspection", new_inspection_path %></p>

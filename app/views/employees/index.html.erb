@@ -1,0 +1,25 @@
+<% title "Employees" %>
+
+<table>
+  <tr>
+    <th>Department</th>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Position</th>
+    <th>Telephone</th>
+  </tr>
+  <% for employee in @employees %>
+    <tr>
+      <td><%=h employee.department.name %></td>
+      <td><%=h employee.name %></td>
+      <td><%=h employee.email %></td>
+      <td><%=h employee.position %></td>
+      <td><%=h employee.telephone %></td>
+      <td><%= link_to "Show", employee %></td>
+      <td><%= link_to "Edit", edit_employee_path(employee) %></td>
+      <td><%= link_to "Destroy", employee, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Employee", new_employee_path %></p>

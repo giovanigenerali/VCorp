@@ -1,0 +1,24 @@
+<% form_for @employee do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :department %><br />
+	<%= collection_select(:employee, :department_id, @departments, :id, :name, {:prompt => true} ) %>
+  </p>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </p>
+  <p>
+    <%= f.label :position %><br />
+    <%= f.text_field :position %>
+  </p>
+  <p>
+    <%= f.label :telephone %><br />
+    <%= f.text_field :telephone %>
+  </p>
+  <p><%= f.submit "Submit" %></p>
+<% end %>

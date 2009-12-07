@@ -1,0 +1,32 @@
+<% title "Car" %>
+
+<p>
+  <strong>Make:</strong>
+  <%=h @car.make %>
+</p>
+<p>
+  <strong>Model:</strong>
+  <%=h @car.model %>
+</p>
+<p>
+  <strong>Model Year:</strong>
+  <%=h @car.model_year %>
+</p>
+<p>
+  <strong>Manufacture Year:</strong>
+  <%=h @car.manufacture_year %>
+</p>
+<p>
+  <strong>Board:</strong>
+  <%=h @car.board %>
+</p>
+<p>
+  <strong>Color:</strong>
+  <%=h @car.color %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_car_path(@car) %> |
+  <%= link_to "Destroy", @car, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", cars_path %>
+</p>
