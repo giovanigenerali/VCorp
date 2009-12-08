@@ -2,18 +2,20 @@
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html>
   <head>
-    <title><%= h(yield(:title) || "Untitled") %></title>
+    <title>VCorp - <%= h(yield(:title) || "Home") %></title>
     <%= stylesheet_link_tag 'application' %>
     <%= yield(:head) %>
   </head>
   <body>
     <div id="container">
-      <%- flash.each do |name, msg| -%>
+			<h1>VCorp</h1>      
+			
+			<%- flash.each do |name, msg| -%>
         <%= content_tag :div, msg, :id => "flash_#{name}" %>
       <%- end -%>
       
       <%- if show_title? -%>
-        <h1><%=h yield(:title) %></h1>
+        <h2><%=h yield(:title) %></h2>
       <%- end -%>
       
       <%= yield %>
